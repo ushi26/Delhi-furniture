@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
+<link href="css/owl.theme.default.css" rel="stylesheet" type="text/css" />
+<script src="JS/jquery-3.6.0.min.js"></script>
+<script src="JS/owl.carousel.js"></script>
+<script src="JS/custom.js"></script>
+
     <link rel="canonical" href="chipham.html">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +39,12 @@
 
     <div class="row">
         <div class="col-12">
-                <div class="img-100"><img src="images/Banner1.png" /></div>
+            <div  class="owl-carousel owl-theme" id="banner">
+                <div class="item"><a href = "#"><img src="images/Banner1.png" /></a></div>
+                <div class="item"><a href = "#"><img src="images/Banner2.png" /></a></div>
+                <div class="item"><a href = "#"><img src="images/Banner3.png" /></a></div>
+                </div>
+                
             </div>                
         </div>
     </div>
@@ -187,5 +198,24 @@
 
 
    </div>
+   <script>
+    $(document).ready(function(){
+       $(".owl-carousel").owlCarousel({
+         loop: true,            
+         margin: 10,
+         nav: true,             
+         dots: true,            
+         autoplay: true,        
+         autoplayTimeout: 3000, 
+         autoplayHoverPause: true, 
+         responsive:{
+           0:{ items:1 },       
+           600:{ items:1 },     
+           1000:{ items:1 }     
+         }
+       })
+     });
+      
+   </script>
 </body>
     
